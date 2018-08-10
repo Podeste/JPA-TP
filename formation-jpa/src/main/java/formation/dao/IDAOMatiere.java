@@ -1,5 +1,7 @@
 package formation.dao;
 
-public interface IDAOMatiere {
+import sopra.promo404.formation.model.Matiere;
+
+public interface IDAOMatiere extends IDAO<Matiere, Long>{
 
 }

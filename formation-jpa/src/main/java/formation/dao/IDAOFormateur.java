@@ -1,5 +1,7 @@
 package formation.dao;
 
-public interface IDAOFormateur {
+import sopra.promo404.formation.model.Formateur;
+
+public interface IDAOFormateur extends IDAO<Formateur, Long>{
 
 }

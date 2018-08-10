@@ -1,5 +1,8 @@
 package formation.dao;
 
-public interface IDAOEleve {
+
+import sopra.promo404.formation.model.Eleve;
+
+public interface IDAOEleve extends IDAO<Eleve, Long>{
 
 }

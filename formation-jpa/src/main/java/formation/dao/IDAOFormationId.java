@@ -1,5 +1,7 @@
 package formation.dao;
 
-public interface IDAOFormationId {
+import sopra.promo404.formation.model.FormationId;
+
+public interface IDAOFormationId extends IDAO<FormationId, Long>{
 
 }
