@@ -12,7 +12,7 @@ import javax.persistence.Inheritance;
 public class Adresse implements Serializable{
 	@Column(name="road")
 	private String rue;
-	@Column(name="Postal Code")
+	@Column(name="Postal_Code")
 	private String codePostal;
 	@Column(name="City")
 	private String ville;

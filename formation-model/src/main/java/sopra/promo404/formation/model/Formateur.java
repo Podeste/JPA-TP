@@ -12,7 +12,6 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
-import javax.persistence.Transient;
 import javax.persistence.UniqueConstraint;
 @Entity
 @DiscriminatorValue("form")
@@ -22,8 +21,7 @@ public class Formateur extends Personne {
 	@Column(name="experience")
 	private int experience;
 	
-	@OneToMany
-	(mappedBy="formateur")
+	@OneToMany(mappedBy="formateur")
 	private List<Eleve> eleves = new ArrayList<>();
 	@ManyToMany
 	@JoinTable(	name = "formateur_matiere", 	
