@@ -7,6 +7,7 @@ import javax.persistence.Column;
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 @Entity
 @Table(name = "formation")
@@ -16,6 +17,8 @@ public class Formation {
 	
 	@Column(name="Duree")
 	private int duree;
+	
+	@Transient
 	private List<Matiere> matieres = new ArrayList<>();
 
 	public Formation() {
