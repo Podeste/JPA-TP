@@ -8,7 +8,7 @@ import javax.persistence.Persistence;
 public class Test {
 
 	public static void main(String[] args) {
-		EntityManagerFactory emf = Persistence.createEntityManagerFactory("eshop");
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("formation");
 		
 		EntityManager em = null;
 		
@@ -34,11 +34,11 @@ public class Test {
 //				em.close();
 //			}
 //		}
-		em.close();
+		
 		
 		emf.close();
 
-		}
+		
 	}
 
 }
