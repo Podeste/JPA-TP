@@ -5,10 +5,22 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import javax.persistence.Column;
+import javax.persistence.DiscriminatorValue;
+import javax.persistence.Entity;
+import javax.persistence.Transient;
+@Entity
+@DiscriminatorValue("form")
 public class Formateur extends Personne {
+	@Column(name="referent")
 	private boolean referent;
-	private int experience;
+	@Column(name="experience")
+	private int experience;7
+	@Transient
+	//@Column(name="Student")
 	private List<Eleve> eleves = new ArrayList<>();
+	@Transient
+	//@Column(name="matter")
 	private Set<Matiere> matieres = new HashSet<>();
 
 	public Formateur() {

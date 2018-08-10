@@ -1,9 +1,22 @@
 package sopra.promo404.formation.model;
 
-public class Adresse {
+import java.io.Serializable;
+
+import javax.persistence.Column;
+import javax.persistence.Embeddable;
+import javax.persistence.Entity;
+import javax.persistence.Inheritance;
+
+
+@Embeddable
+public class Adresse implements Serializable{
+	@Column(name="road")
 	private String rue;
+	@Column(name="Postal Code")
 	private String codePostal;
+	@Column(name="City")
 	private String ville;
+	@Column(name="Country")
 	private String pays;
 
 	public Adresse() {

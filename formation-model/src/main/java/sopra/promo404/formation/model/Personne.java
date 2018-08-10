@@ -1,10 +1,33 @@
 package sopra.promo404.formation.model;
 
+import javax.persistence.Column;
+import javax.persistence.DiscriminatorColumn;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.IdClass;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
+import javax.persistence.Transient;
+
+@Entity
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name="disc")
+
 public abstract class Personne {
+	@Id
+	@GeneratedValue
+	@Column(name="id")
 	private Long id;
+	@Column(name="name")
 	private String nom;
+	@Column(name="firstname")
 	private String prenom;
+	@Transient
+	//@Column(name="adress")
 	private Adresse adresse;
+	
+	
 
 	public Personne() {
 		super();

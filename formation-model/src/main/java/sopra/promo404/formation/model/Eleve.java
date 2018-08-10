@@ -2,10 +2,20 @@ package sopra.promo404.formation.model;
 
 import java.util.Date;
 
+import javax.persistence.Column;
+import javax.persistence.DiscriminatorValue;
+import javax.persistence.Entity;
+import javax.persistence.Transient;
+@Entity
+@DiscriminatorValue("ele")
 public class Eleve extends Personne {
+	@Column(name="civility")
 	private Civilite civilite;
+	@Column(name="Birthday")
 	private Date dtNaissance;
+    @Transient
 	private Formateur formateur;
+    @Transient
 	private Ordinateur ordinateur;
 
 	public Eleve() {
