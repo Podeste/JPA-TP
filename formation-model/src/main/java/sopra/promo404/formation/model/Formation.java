@@ -3,8 +3,15 @@ package sopra.promo404.formation.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.Column;
+import javax.persistence.EmbeddedId;
+import javax.persistence.Id;
+
 public class Formation {
+	@EmbeddedId
 	private FormationId id;
+	
+	@Column(name="Duree")
 	private int duree;
 	private List<Matiere> matieres = new ArrayList<>();
 

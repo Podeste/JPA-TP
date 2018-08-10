@@ -3,7 +3,7 @@ package sopra.promo404.formation.model;
 import java.io.Serializable;
 
 import javax.persistence.Embeddable;
-
+@Embeddable
 @SuppressWarnings("serial")
 public class FormationId implements Serializable {
 	private String client;

@@ -3,18 +3,20 @@
 	xmlns="http://java.sun.com/xml/ns/persistence"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/persistencehttp://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
-	<persistence-unit name="eshop"
+	<persistence-unit name="formation"
 		transaction-type="RESOURCE_LOCAL">
 		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 
-		<class>eshop.model.Personne</class>
-		<class>eshop.model.Fournisseur</class> 
-		<class>eshop.model.Client</class>
-		<class>eshop.model.Produit</class>
-
+		<class>formation.model.Personne</class>
+		<class>formation.model.Eleve</class> 
+		<class>formation.model.Formateur</class>
+		<class>formation.model.Ordinateur</class>
+		<class>formation.model.Matiere</class>
+		<class>formation.model.Formation</class>
+		<class>formation.model.FormationId</class>
 		<properties>
 			<property name="hibernate.connection.url"
-				value="jdbc:postgresql://localhost:5432/eshop" />
+				value="jdbc:postgresql://localhost:5432/formation-JPA" />
 			<property name="hibernate.connection.driver"
 				value="org.postgresql.Driver" />
 			<property name="hibernate.connection.user" value="postgres" />
