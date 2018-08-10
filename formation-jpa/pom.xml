@@ -3,7 +3,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>sopra.promo404</groupId>
-	<artifactId>eshop-jpa</artifactId>
+	<artifactId>formation-jpa</artifactId>
 	<packaging>jar</packaging>
 	<version>1.0-SNAPSHOT</version>
 	<name>eshop-jpa</name>
@@ -17,7 +17,7 @@
 	<dependencies>
 		<dependency>
 			<groupId>sopra.promo404</groupId>
-			<artifactId>eshop-model</artifactId>
+			<artifactId>formation-model</artifactId>
 			<version>1.0-SNAPSHOT</version>
 		</dependency>
 		<dependency>
