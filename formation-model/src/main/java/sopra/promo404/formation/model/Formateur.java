@@ -15,7 +15,7 @@ public class Formateur extends Personne {
 	@Column(name="referent")
 	private boolean referent;
 	@Column(name="experience")
-	private int experience;7
+	private int experience;
 	@Transient
 	//@Column(name="Student")
 	private List<Eleve> eleves = new ArrayList<>();

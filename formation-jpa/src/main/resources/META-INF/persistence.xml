@@ -7,13 +7,13 @@
 		transaction-type="RESOURCE_LOCAL">
 		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 
-		<class>formation.model.Personne</class>
-		<class>formation.model.Eleve</class> 
-		<class>formation.model.Formateur</class>
-		<class>formation.model.Ordinateur</class>
-		<class>formation.model.Matiere</class>
-		<class>formation.model.Formation</class>
-		<class>formation.model.FormationId</class>
+		<class>sopra.promo404.formation.model.Personne</class>
+		<class>sopra.promo404.formation.model.Eleve</class> 
+		<class>sopra.promo404.formation.model.Formateur</class>
+		<class>sopra.promo404.formation.model.Ordinateur</class>
+		<class>sopra.promo404.formation.model.Matiere</class>
+		<class>sopra.promo404.formation.model.Formation</class>
+		<class>sopra.promo404.formation.model.FormationId</class>
 		<properties>
 			<property name="hibernate.connection.url"
 				value="jdbc:postgresql://localhost:5432/formation-JPA" />
