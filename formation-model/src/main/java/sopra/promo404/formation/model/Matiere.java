@@ -7,8 +7,9 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+
 import javax.persistence.Table;
-import javax.persistence.Transient;
+
 
 @Entity
 @Table(name = "matiere")
@@ -27,7 +28,7 @@ public class Matiere {
 	@Column(name = "difficulte")
 	private Difficulte difficulte;
 	
-	@Transient
+	
 	private List<Formateur> formateurs = new ArrayList<>();
 
 	public Matiere() {

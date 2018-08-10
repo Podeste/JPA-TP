@@ -6,8 +6,11 @@ import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
+import javax.persistence.JoinTable;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
-import javax.persistence.Transient;
+import javax.persistence.UniqueConstraint;
 
 @Entity
 @Table(name = "formation")
@@ -18,7 +21,14 @@ public class Formation {
 	@Column(name="Duree")
 	private int duree;
 	
-	@Transient
+	@ManyToMany
+	@JoinTable(name="formation_matière",
+			   joinColumns = {
+				   @JoinColumn(name = "client"),
+				   @JoinColumn(name = "promotion")
+				   },
+			   inverseJoinColumns =@JoinColumn(name = "matiere_id") ,
+			   uniqueConstraints = @UniqueConstraint(columnNames = {"client","promotion","matiere_id"}))
 	private List<Matiere> matieres = new ArrayList<>();
 
 	public Formation() {
