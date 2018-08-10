@@ -28,7 +28,7 @@ public class Eleve extends Personne {
 		super();
 	}
 
-	public Eleve(Civilite civilite, String nom, String prenom, Date dtNaissance) {
+	public Eleve(String nom) {
 		super(nom, prenom);
 		this.civilite = civilite;
 		this.dtNaissance = dtNaissance;
