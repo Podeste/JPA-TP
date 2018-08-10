@@ -5,17 +5,23 @@ import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Transient;
+
 @Entity
 @DiscriminatorValue("ele")
 public class Eleve extends Personne {
-	@Column(name="civility")
+	@Column(name = "civility")
 	private Civilite civilite;
-	@Column(name="Birthday")
+	@Column(name = "Birthday")
 	private Date dtNaissance;
-    @Transient
+	@ManyToOne
+	@JoinColumn(name = "FORMATEUR_ID")
 	private Formateur formateur;
-    @Transient
+   @OneToOne(mappedBy="eleve")
+
 	private Ordinateur ordinateur;
 
 	public Eleve() {
